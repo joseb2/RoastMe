@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String prepositions = "https://github.com/joseb2/RoastMe/blob/master/src/prepositions.txt";
+        String prepositions = "RoastMe/src/prepositions.txt";
         String dictionary = "https://github.com/joseb2/RoastMe/blob/master/src/brit-a-z.txt";
         String opener = "https://github.com/joseb2/RoastMe/blob/master/src/opener.txt";
 
@@ -36,13 +36,12 @@ public class Main {
         // opener Words
         openWords = refArray(opener, openWords);
 
-//          int i;
 
-          // for loops prints all elements
-//          for ( i =0; i < arr.length; i++) {
-//              System.out.println(arr[i]);
-//          }
         // random collection of strings for specificed arrays
+
+
+       // todo** test random integers for fix on selecting random words
+
         String randomPrep = prepWords[((int)(Math.random() * prepLen))];
         String randomDictWords = dictWords[((int)(Math.random() * dictLen))];
         String randomOpen = openWords[((int)(Math.random()*openLen))];
@@ -53,10 +52,13 @@ public class Main {
 
     }
 
+
+    // todo**  replace reference array and try/catch with URLReader with http, reference strings at beginning.
+
     public static String[] refArray(String filename, String[] arr){
         // try-catch method for reading file, placing it in given array, and/or printing error message
             try {
-                ReadFile file = new ReadFile(filename);
+                URLreader file = new URLreader(filename);
                 arr = file.OpenFile();
             } catch (IOException e) {
                 System.out.println(e.getMessage());
