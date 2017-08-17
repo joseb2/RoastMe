@@ -11,9 +11,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String prepositions = "C:\\Users\\Admin\\Desktop\\JohningStudy\\prepositions.txt";
-        String dictionary = "C:\\Users\\Admin\\Desktop\\JohningStudy\\brit-a-z.txt";
-        String opener = "C:\\Users\\Admin\\Desktop\\JohningStudy\\opener.txt";
+        String prepositions = "https://github.com/joseb2/RoastMe/blob/master/src/prepositions.txt";
+        String dictionary = "https://github.com/joseb2/RoastMe/blob/master/src/brit-a-z.txt";
+        String opener = "https://github.com/joseb2/RoastMe/blob/master/src/opener.txt";
 
 
         // fix index
@@ -48,11 +48,8 @@ public class Main {
         String randomOpen = openWords[((int)(Math.random()*openLen))];
         String randomArticle = articles[((int)(Math.random()*articles.length))];
 
-        if (randomOpen.equals("-"))
-            System.out.println("you look like" + randomArticle + " " + " " + randomDictWords + " " + randomPrep + " " + randomDictWords);
-        else
-                                                    // figure out a way to have to random words without the method
-            System.out.println(randomOpen + " a " + dictWords[(int)Math.random()*dictLen] + " " + randomPrep + " " + randomDictWords);
+
+        System.out.println("you look like" + randomArticle + " " + " " + randomDictWords + " " + randomPrep + " " + randomDictWords);
 
     }
 
